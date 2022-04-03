@@ -1,12 +1,10 @@
 
 # Solution 1
 number = int(input())
-start = 1
 room = 1
-count = 0
+count = 1
 
 def solution(number):
-  global start
   global room
   global count 
 
@@ -22,7 +20,6 @@ print(count)
 
 # Solution 2
 number = int(input())
-start = 1
 room = 1
 count = 0
 
