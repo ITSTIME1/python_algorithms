@@ -7,5 +7,6 @@ while sugar_number >= 0:
     break
   else:
     sugar_number-=3
-    count+=1
-    
+    count+=1 
+else:
+  print(-1)
