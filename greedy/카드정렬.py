@@ -26,3 +26,29 @@
 # 그럼 초반에 값이 나왔던 값을 따로 변수에 저장해주고
 # 이후에 더했던 값이 나오면 그 값이랑 따로 저장한 회수값이랑 더해 결과를 도출한다.
 
+
+
+# 카드 묶음의 개수
+N  = int(input())
+
+# 카드 묶음 장수 입력
+N_list = []
+previous_card = 0
+first_result = 0
+second_result = 0
+for i in range(N):
+  N_list.append(int(input()))
+  N_list.sort()
+
+# 두번 반복 0,1
+for j in range(len(N_list)-1):
+  # 두번 반복
+  if(j == 0):
+    previous_card = N_list[j]
+    N_list.pop(j)
+    first_result += previous_card + N_list[j]
+  elif(j == 1):
+    N_list.pop(0)
+    second_result = first_result + N_list[0]
+
+print(second_result+first_result)
